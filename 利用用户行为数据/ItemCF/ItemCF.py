@@ -13,7 +13,7 @@ def cosSim(inA,inB):
 def ecludSim(inA,inB):
     return 1.0/(1.0 + la.norm(inA - inB))
 
-
+# 规范化相似度
 def normalized(W):
     valueList = [item for user, item in W.items()]
     print(sum(valueList))
@@ -27,7 +27,7 @@ def normalized(W):
         W[user[0], user[1]] = value/maxValue
 
 
-
+# 计算物品之间的隐式相似度
 def ItemSimilarity_implicit(users_item, target_item):
     # calculate co-rated users between items
     C = dict()
